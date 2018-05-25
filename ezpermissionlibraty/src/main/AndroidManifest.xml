@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.vvme.permission">
+
+    <application>
+        <activity
+            android:name=".ui.PermissionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:theme="@style/EzPermission.Theme.Activity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
+
+        <provider
+            android:name=".FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/permission_file_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,24 @@
+ext {
+    plugins = [
+            application: 'com.android.application',
+            library    : 'com.android.library',
+            maven      : 'com.github.dcendents.android-maven',
+            bintray    : 'com.jfrog.bintray'
+    ]
+
+    android = [
+            applicationId    : "com.vvme.permission",
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.3",
+            minSdkVersion    : 14,
+            targetSdkVersion : 27,
+            versionCode      : 101,
+            versionName      : "1.0.1"
+    ]
+
+    dependencies = [
+            fragment  : 'com.android.support:support-fragment:27.1.1',
+            appCompat : 'com.android.support:appcompat-v7:27.1.1',
+            design    : 'com.android.support:design:27.1.1',
+    ]
+}

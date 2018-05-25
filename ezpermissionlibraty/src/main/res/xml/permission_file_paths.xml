@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!--<files-path name="name" path="path" /> 对应Context.getFilesDir() + “/path/”，即/data/data/<package-name>/files/path/。-->
+    <files-path
+        name="file_path"
+        path="."/>
+
+    <!--<cache-path name="name" path="path" /> 对应Context.getCacheDir() + “/path/”，即/data/data/<package-name>/cache/path/。-->
+    <cache-path
+        name="cache_path"
+        path="."/>
+
+    <!--<external-path name="name" path="path" /> 对应Environment.getExternalStorageDirectory() + “/path/”，即/storage/emulated/0/path/。-->
+    <external-path
+        name="external_path"
+        path="Android/data/$(applicationId)/"/>
+
+    <!--<external-files-path name="name" path="path" /> 对应Context.getExternalFilesDir(null) + “/path/”，即/storage/emulated/0/Android/data/<package_name>/files/path/。-->
+    <external-files-path
+        name="external_files_path"
+        path="."/>
+
+    <!--<external-cache-path name="name" path="path" /> 对应Context.getExternalCacheDir() + “/path/”，即/storage/emulated/0/Android/data/<package-name>/cache/path/。-->
+    <external-cache-path
+        name="external_cache_path"
+        path="."/>
+
+    <!--<external-media-path name="name" path="path" /> 对应Context.getExternalMediaDirs() + “/path/”，即/storage/emulated/0/path/。-->
+    <external-media-path
+        name="external_media_path"
+        path="."/>
+
+</paths>
