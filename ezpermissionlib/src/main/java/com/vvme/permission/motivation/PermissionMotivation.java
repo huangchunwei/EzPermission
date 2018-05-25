@@ -10,10 +10,10 @@ import android.os.Build;
 import java.lang.reflect.Method;
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/22 14:59.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
  * Description: TODO
  */
 public class PermissionMotivation implements Motivation {

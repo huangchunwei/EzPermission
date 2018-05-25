@@ -11,7 +11,6 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -22,10 +21,10 @@ import com.vvme.permission.setting.PSetting;
 
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/22 14:34.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
  * Description: TODO
  */
 public class PermissionActivity extends Activity {
@@ -101,11 +100,9 @@ public class PermissionActivity extends Activity {
                         finish();
                         return;
                     }
-                    Log.d("hate", "PermissionActivity进行权限申请");
                     requestPermissions(permissions, VALUE_PERMISSION_OPERATION);
                     break;
                 case VALUE_PERMISSION_SETTING_OPERATION:
-                    //跳转到权限设置页面
                     PSetting pSetting = new PSetting(new PermissionMotivation(PermissionActivity.this));
                     pSetting.execute(VALUE_PERMISSION_SETTING_OPERATION);
                     break;

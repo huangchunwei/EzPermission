@@ -11,10 +11,10 @@ import com.vvme.permission.motivation.Motivation;
 import java.io.File;
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/24 19:35.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
  * Description: TODO
  */
 public class NInstallRequest implements InstallRequest {

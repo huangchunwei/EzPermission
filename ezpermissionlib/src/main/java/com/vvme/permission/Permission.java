@@ -1,8 +1,8 @@
 package com.vvme.permission;
 
 /**
- * @author: hcw
- * @date 2018/1/31
+ * Author: hcw
+ * Date 2018/1/31
  */
 
 

@@ -1,7 +1,6 @@
 package com.vvme.permission.request;
 
 import android.os.Build;
-import android.util.Log;
 
 import com.vvme.permission.action.Action;
 import com.vvme.permission.action.RationaleAction;
@@ -18,10 +17,10 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/22 18:06.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
  * Description: TODO
  */
 public class RealPRequest implements IPRequest<RealPRequest>, PermissionExecutor {
@@ -40,27 +39,17 @@ public class RealPRequest implements IPRequest<RealPRequest>, PermissionExecutor
     private PermissionActivity.RequestPermissionListener mPermissionListener = new PermissionActivity.RequestPermissionListener() {
         @Override
         public void onRequestCallback() {
-            Log.d("hate", "申请权限的回调");
             HANDLER.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     List<String> permissions = generatePermissions(mMotivation, new ArrayList<String>(fInternalPermission));
                     if (permissions.isEmpty()) {
-                        //授权成功
                         sendSuccess(new ArrayList<String>(fInternalPermission));
                     } else {
-                        //授权失败
                         sendFailed(permissions);
                     }
                 }
             }, 100);
-        }
-    };
-
-    private PermissionActivity.RequestPermissionListener mSettingCallback = new PermissionActivity.RequestPermissionListener() {
-        @Override
-        public void onRequestCallback() {
-            Log.d("hate", "跳转设置页面的回调");
         }
     };
 
@@ -106,14 +95,12 @@ public class RealPRequest implements IPRequest<RealPRequest>, PermissionExecutor
     @Override
     public void start() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            // TODO: 2018/5/22 不需要动态申请权限
             sendSuccess(new ArrayList<String>(fInternalPermission));
             return;
         }
         List<String> permissions = generatePermissions(mMotivation, new ArrayList<String>(fInternalPermission));
         mRealPermissions = permissions.toArray(new String[permissions.size()]);
         if (!permissions.isEmpty()) {
-            //需要申请权限
             List<String> rationalePermissions = generateRationalePermission(mMotivation, permissions);
             if (!rationalePermissions.isEmpty()) {
                 if (mRationaleAction != null) {
@@ -128,7 +115,6 @@ public class RealPRequest implements IPRequest<RealPRequest>, PermissionExecutor
     }
 
     private List<String> generatePermissions(Motivation motivation, List<String> permissions) {
-        //初始化长度1
         List<String> permissionList = new ArrayList<>(1);
         for (String permission : permissions) {
             if (!CHECKER.hasPermission(motivation.getContext(), permission)) {
@@ -138,13 +124,6 @@ public class RealPRequest implements IPRequest<RealPRequest>, PermissionExecutor
         return permissionList;
     }
 
-    /**
-     * 是否需要对权限进行解释
-     *
-     * @param motivation
-     * @param permissions
-     * @return
-     */
     private List<String> generateRationalePermission(Motivation motivation, List<String> permissions) {
         List<String> rationaleList = new ArrayList<>(1);
         for (String permission : permissions) {

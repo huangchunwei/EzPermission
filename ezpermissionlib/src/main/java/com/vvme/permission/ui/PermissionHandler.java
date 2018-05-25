@@ -4,10 +4,10 @@ import android.os.Handler;
 import android.os.Looper;
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/22 17:20.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
  * Description: TODO
  */
 public class PermissionHandler {

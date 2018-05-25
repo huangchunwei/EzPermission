@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
-import android.util.Log;
 
 import com.vvme.permission.action.SettingAction;
 import com.vvme.permission.motivation.Motivation;
@@ -14,11 +13,11 @@ import com.vvme.permission.ui.PermissionActivity;
 
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/23 19:14.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
- * Description: 参考AndPermission   https://github.com/yanzhenjie/AndPermission/blob/master/permission/src/main/java/com/yanzhenjie/permission/runtime/setting/SettingPage.java
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
+ * Description: AndPermission   https://github.com/yanzhenjie/AndPermission/blob/master/permission/src/main/java/com/yanzhenjie/permission/runtime/setting/SettingPage.java
  */
 public final class PSetting implements PermissionActivity.RequestPermissionListener {
 
@@ -148,7 +147,6 @@ public final class PSetting implements PermissionActivity.RequestPermissionListe
 
     @Override
     public void onRequestCallback() {
-        Log.d("hate", "设置页面: onRequestCallback()");
         if (mSettingAction != null) {
             mSettingAction.onAction();
         }

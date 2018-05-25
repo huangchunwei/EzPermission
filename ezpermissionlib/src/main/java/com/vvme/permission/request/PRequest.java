@@ -12,10 +12,10 @@ import com.vvme.permission.setting.PSetting;
 import java.util.List;
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/22 14:36.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
  * Description: TODO
  */
 public final class PRequest implements IPRequest<PRequest>, ISetting<PSetting>, IInstall<InstallRequest> {

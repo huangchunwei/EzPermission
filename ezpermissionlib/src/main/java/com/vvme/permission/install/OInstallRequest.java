@@ -16,10 +16,10 @@ import com.vvme.permission.ui.PermissionHandler;
 import java.io.File;
 
 /**
- * Project name:MyAndroid
+ * Project name:EzPermission
  * Author:VV
  * Created on 2018/5/24 18:24.
- * Copyright (c) 2018, vvismile@163.com All Rights Reserved.
+ * Copyright (c) 2018, huangchunwei715@163.com All Rights Reserved.
  * Description: TODO
  */
 public class OInstallRequest implements InstallRequest, PermissionExecutor, PermissionActivity.RequestPermissionListener {
