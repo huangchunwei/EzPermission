@@ -1,1 +1,1 @@
-include ':app', ':ezpermissionlibraty'
+include ':app', ':ezpermissionlib'

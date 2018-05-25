@@ -21,4 +21,34 @@ ext {
             appCompat : 'com.android.support:appcompat-v7:27.1.1',
             design    : 'com.android.support:design:27.1.1',
     ]
+
+    bintray = [
+            // library
+            version       : "1.0.1",
+
+            siteUrl       : 'https://github.com/huangchunwei/EzPermission',
+            gitUrl        : 'git@github.com:huangchunwei/EzPermission.git',
+
+            group         : "com.huangchunwei",
+
+            // project
+            packaging     : 'aar',
+            name          : 'EzPermission',
+            description   : 'A easy permission library for Android.',
+
+            // project.license
+            licenseName   : 'The Apache Software License, Version 2.0',
+            licenseUrl    : 'http://www.apache.org/licenses/LICENSE-2.0.txt',
+
+            // project.developers
+            developerId   : 'chunwei',
+            developerName : 'chunwei',
+            developerEmail: 'huangchunwei715@163.com',
+
+            // bintray
+            binrayLibrary : "EzPermission",
+            bintrayRepo   : "maven",
+            bintrayUser   : 'chunwei',
+            bintrayLicense: "Apache-2.0"
+    ]
 }
